@@ -1,0 +1,122 @@
+[
+    {
+        "images": [
+            "../../../public/assets/images.jpg",
+            "../../../public/assets/images2.jpg.jpg",
+            "../../../public/assets/images3.jpg.jpg",
+            "../../../public/assets/images4.jpg.jpg"
+        ],
+        "title": "Beautiful Villa",
+        "name": "Seaside Paradise",
+        "price": 250.75,
+        "house1": "Modern ",
+        "house01": "3 bedrooms",
+        "house2": "Rustic ",
+        "house02": "2 bedrooms",
+        "house3": "Luxury ",
+        "house03": "5 bedrooms",
+        "like": 102,
+        "dislike": 5,
+        "comment": "A stunning location with breathtaking views!"
+    },
+    {
+        "images": [
+            "../../../public/assets/images.jpg",
+            "../../../public/assets/images2.jpg.jpg",
+            "../../../public/assets/images3.jpg.jpg",
+            "../../../public/assets/images4.jpg.jpg"
+        ],
+        "title": "Cozy Cottage",
+        "name": "Mountain Retreat",
+        "price": 120.5,
+        "house1": "Classic design",
+        "house01": "2 bedrooms",
+        "house2": "Cabin style",
+        "house02": "3 bedrooms",
+        "house3": "Tiny home",
+        "house03": "1 bedroom",
+        "like": 85,
+        "dislike": 8,
+        "comment": "Perfect for a quiet getaway."
+    },
+    {
+        "images": [
+            "../../../public/assets/images.jpg",
+            "../../../public/assets/images2.jpg.jpg",
+            "../../../public/assets/images3.jpg.jpg",
+            "../../../public/assets/images4.jpg.jpg"
+        ],
+        "title": "Urban Apartment",
+        "name": "City Lights",
+        "price": 300.0,
+        "house1": "Penthouse suite",
+        "house01": "4 bedrooms",
+        "house2": "Modern apartment",
+        "house02": "3 bedrooms",
+        "house3": "Studio",
+        "house03": "1 bedroom",
+        "like": 150,
+        "dislike": 12,
+        "comment": "Close to all major attractions!"
+    },
+    {
+        "images": [
+            "../../../public/assets/images.jpg",
+            "../../../public/assets/images2.jpg.jpg",
+            "../../../public/assets/images3.jpg.jpg",
+            "../../../public/assets/images4.jpg.jpg"
+        ],
+        "title": "Country Estate",
+        "name": "Green Fields",
+        "price": 400.0,
+        "house1": "Farmhouse style",
+        "house01": "5 bedrooms",
+        "house2": "Barn conversion",
+        "house02": "4 bedrooms",
+        "house3": "Cottage",
+        "house03": "3 bedrooms",
+        "like": 200,
+        "dislike": 3,
+        "comment": "Spacious and peaceful!"
+    },
+    {
+        "images": [
+            "../../../public/assets/images.jpg",
+            "../../../public/assets/images2.jpg.jpg",
+            "../../../public/assets/images3.jpg.jpg",
+            "../../../public/assets/images4.jpg.jpg"
+        ],
+        "title": "Lake House",
+        "name": "Serene Shores",
+        "price": 275.0,
+        "house1": "Lakeside cabin",
+        "house01": "2 bedrooms",
+        "house2": "Luxury villa",
+        "house02": "4 bedrooms",
+        "house3": "Chalet",
+        "house03": "3 bedrooms",
+        "like": 145,
+        "dislike": 6,
+        "comment": "Beautiful views and relaxing ambiance."
+    },
+    {
+        "images": [
+            "../../../public/assets/images.jpg",
+            "../../../public/assets/images2.jpg.jpg",
+            "../../../public/assets/images3.jpg.jpg",
+            "../../../public/assets/images4.jpg.jpg"
+        ],
+        "title": "Desert Oasis",
+        "name": "Sandy Bliss",
+        "price": 350.0,
+        "house1": "Modern villa",
+        "house01": "4 bedrooms",
+        "house2": "Adobe style",
+        "house02": "3 bedrooms",
+        "house3": "Tiny home",
+        "house03": "2 bedrooms",
+        "like": 170,
+        "dislike": 9,
+        "comment": "A unique experience in the desert!"
+    }
+]
