@@ -1,7 +1,12 @@
+//==========
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Close from "@/public/icons/Close";
+import HomeIcon from "@/public/icons/HomeIcon";
+import Calender from "@/public/icons/Calender";
+import SaleIcon from "@/public/icons/SaleIcon";
+import BoxIcon from "@/public/icons/BoxIcon";
 
 export default function Sidebar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,51 +15,89 @@ export default function Sidebar() {
     const toggleSidebar = () => setIsOpen(!isOpen);
 
     // Function to close the sidebar
-    const closeSidebar = () => setIsOpen(false);
 
     return (
-        <div className="flex h-screen w-2 mr-14 ">
+        <div className="flex h-screen">
             {/* Sidebar */}
             <div
-                className={`fixed top-0 left-0 w-64 bg-gray-200  text-black p-5 transition-transform transform ${
-                    isOpen ? "translate-x-0" : "-translate-x-full"
-                } h-full`}
+                className={`fixed top-[80px]  left-0 bg-gray-200 text-black p-5 transition-all duration-300 h-[calc(100%-30px)] ${
+                    isOpen ? "w-80" : "w-[80px]"
+                }`}
             >
-                {/* Close Button inside Sidebar */}
+                {/* Toggle Sidebar Button (Always visible inside the sidebar) */}
                 <button
-                    className="absolute top-4 right-4 p-2 bg-red-500 text-white rounded"
-                    onClick={closeSidebar}
+                    className="p-2 rounded mb-6 text-3xl"
+                    onClick={toggleSidebar}
                 >
-                    Close
+                    {isOpen ? (
+                        <div className="flex justify-between items-center gap-2">
+                            Logo <Close />
+                        </div>
+                    ) : (
+                        <>
+                            <HomeIcon />
+                        </>
+                    )}
                 </button>
 
-                <div className="text-xl font-bold mb-8">Sidebar</div>
-                <ul>
+                <ul className="mt-96">
                     <li>
                         <Link href="/">
                             <span className="block py-2 px-4 hover:bg-blue-600 rounded">
-                                Home
+                                {isOpen ? (
+                                    <div className="flex gap-2">
+                                        <BoxIcon /> Home
+                                    </div>
+                                ) : (
+                                    <>
+                                        <BoxIcon />
+                                    </>
+                                )}
                             </span>
                         </Link>
                     </li>
                     <li>
                         <Link href="/about">
                             <span className="block py-2 px-4 hover:bg-blue-600 rounded">
-                                About
+                                {isOpen ? (
+                                    <div className="flex gap-2">
+                                        <SaleIcon /> About Us
+                                    </div>
+                                ) : (
+                                    <>
+                                        <SaleIcon />
+                                    </>
+                                )}
                             </span>
                         </Link>
                     </li>
                     <li>
                         <Link href="/services">
                             <span className="block py-2 px-4 hover:bg-blue-600 rounded">
-                                Services
+                                {isOpen ? (
+                                    <div className="flex gap-2">
+                                        <BoxIcon /> Servise
+                                    </div>
+                                ) : (
+                                    <>
+                                        <BoxIcon />
+                                    </>
+                                )}
                             </span>
                         </Link>
                     </li>
                     <li>
                         <Link href="/contact">
                             <span className="block py-2 px-4 hover:bg-blue-600 rounded">
-                                Contact
+                                {isOpen ? (
+                                    <div className="flex gap-2">
+                                        <Calender /> Contact Us
+                                    </div>
+                                ) : (
+                                    <>
+                                        <Calender />
+                                    </>
+                                )}
                             </span>
                         </Link>
                     </li>
@@ -62,87 +105,11 @@ export default function Sidebar() {
             </div>
 
             {/* Main Content */}
-            <div className="flex-1 p-3  bg-slate-300 ">
-                {/* Toggle Sidebar Button (Visible on all devices) */}
-                <div>
-                    <button
-                        className="p-2 bg-white text-black rounded mb-6 text-3xl text-"
-                        onClick={toggleSidebar}
-                    >
-                        {isOpen ? "<" : " > "}
-                    </button>
-
-                    <div>
-                        <ul className="text-black">
-                            <li>
-                                <Link href="/services">
-                                    <h1 className="block rounded">
-                                        <Image
-                                            className="rounded-xl text-white"
-                                            src="/home.svg"
-                                            width={100}
-                                            height={100}
-                                            alt="Picture of the property"
-                                        />
-                                    </h1>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/services">
-                                    <span className="block rounded my-4">
-                                        <Image
-                                            className="rounded-xl"
-                                            src="/box.svg"
-                                            width={50}
-                                            height={50}
-                                            alt="Picture of the property"
-                                        />
-                                    </span>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/services">
-                                    <span className="block  rounded">
-                                        <Image
-                                            className="rounded-xl"
-                                            src="/chart.svg"
-                                            width={50}
-                                            height={50}
-                                            alt="Picture of the property"
-                                        />
-                                    </span>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/contact">
-                                    <span className="block rounded my-4">
-                                        <Image
-                                            className="rounded-xl"
-                                            src="/calendar.svg"
-                                            width={50}
-                                            height={50}
-                                            alt="Picture of the property"
-                                        />
-                                    </span>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/contact">
-                                    <span className="block rounded">
-                                        <Image
-                                            className="rounded-xl"
-                                            src="/sale.svg"
-                                            width={50}
-                                            height={50}
-                                            alt="Picture of the property"
-                                        />
-                                    </span>
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <div
+                className={`flex-1 p-3 bg-slate-300 transition-all duration-300 ${
+                    isOpen ? "ml-64" : "ml-[60px]"
+                }`}
+            ></div>
         </div>
     );
 }
